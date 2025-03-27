@@ -1,26 +1,70 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --cibc-red: #c41f3e;
+  --cibc-dark-red: #a51a34;
+  --cibc-light-gray: #f5f5f5;
+  --cibc-gray: #666666;
+  --cibc-dark-gray: #333333;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cibc-red: var(--cibc-red);
+  --color-cibc-dark-red: var(--cibc-dark-red);
+  --color-cibc-light-gray: var(--cibc-light-gray);
+  --color-cibc-gray: var(--cibc-gray);
+  --color-cibc-dark-gray: var(--cibc-dark-gray);
+  --font-sans: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --cibc-light-gray: #1a1a1a;
+    --cibc-gray: #a0a0a0;
+    --cibc-dark-gray: #d0d0d0;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}
+
+/* Hide top nav items on small screens */
+@media (max-width: 768px) {
+  .top-nav-items {
+    display: none;
+  }
+
+  .top-nav-mobile {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* Enhance focus styles for better accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid var(--cibc-red);
+  outline-offset: 2px;
+}
+
+/* Responsive navigation styles */
+@media (max-width: 640px) {
+  nav {
+    gap: 1rem;
+  }
 }
