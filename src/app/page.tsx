@@ -95,7 +95,7 @@ export default function Home() {
                   </div>
                   <a
                     href="mailto:Himanshu.Gandhi@cibc.com"
-                    className="text-white underline hover:text-white/80"
+                    className="text-cibc-dark-gray"
                   >
                     Himanshu.Gandhi@cibc.com
                   </a>
@@ -374,7 +374,7 @@ export default function Home() {
                       </div>
                       <a
                         href="mailto:Himanshu.Gandhi@cibc.com"
-                        className="text-black/70 underline hover:text-black/90"
+                        className="text-cibc-dark-gray"
                       >
                         Himanshu.Gandhi@cibc.com
                       </a>
