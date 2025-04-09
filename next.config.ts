@@ -11,7 +11,8 @@ const nextConfig: NextConfig = {
       //   statusCode: 301,
       // },
       {
-        source: '/:path*',
+        // source: '/:path*',
+        source: '/',
         destination: 'https://advisor.cibc.com/himanshu-gandhi',
         // permanent: false,
         statusCode: 301,
